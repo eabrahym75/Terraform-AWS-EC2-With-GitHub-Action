@@ -1,0 +1,22 @@
+how to deploy your Terraform code using GitHub Actions:
+
+Go to your GitHub repository.
+In the left sidebar, click on Settings.
+Under Actions, click on New workflow.
+In the Workflow name field, enter a name for your workflow.
+In the Event trigger field, select the event that you want to trigger your workflow. For example, you can select Push events to trigger your workflow on every push to your repository.
+In the Jobs section, click on New job.
+In the Job name field, enter a name for your job.
+In the Actions section, click on Add an action.
+In the Action search bar, type terraform and select the Terraform action.
+In the Terraform action configuration, do the following:
+For Working directory, enter the path to your Terraform configuration directory.
+For Terraform version, select the version of Terraform that you want to use.
+For Terraform command, select the Terraform command that you want to run. For example, you can select init to initialize Terraform, plan to plan your Terraform configuration, or apply to apply your Terraform configuration.
+For Terraform arguments, enter any additional arguments that you want to pass to the Terraform command.
+Click on Create workflow.
+Your GitHub Action workflow will be created. The next time that you trigger the workflow, it will run the Terraform command that you specified.
+
+For example, if you created a workflow that was triggered on every push to your repository and you specified the init command in the Terraform action configuration, then the init command would be run every time that you pushed to your repository.
+
+You can also use GitHub Actions to deploy your Terraform code to different environments. For example, you could have a workflow that deploys your Terraform code to a staging environment on every push to your staging branch and a workflow that deploys your Terraform code to a production environment on every merge to your production branc
