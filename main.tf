@@ -4,7 +4,7 @@ resource "aws_instance" "my-apache-server" {
   instance_type     = "t2.micro"
   availability_zone = "us-east-1a"
   key_name          = "aws_key"
-  user_data         = file("install-apache.sh")
+  user_data         = "${file("install-nginx.sh")}"
   tags = {
     "Name" = "Ubuntu Apache server"
   }
